@@ -1,0 +1,17 @@
+// File: .devcontainer/devcontainer.json
+
+{
+  "name": "Kasm Chrome Browser",
+
+  // Tells Codespaces to build the environment from your Dockerfile
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+
+  // Forward the port that Kasm uses for its web VNC interface
+  "forwardPorts": [6901],
+
+  // Keep the container running in the background
+  "runArgs": ["--init"],
+  "shutdownAction": "stopContainer"
+}
